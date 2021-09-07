@@ -1,10 +1,18 @@
 {
-  "dependencies": {
-    "eslint": "^7.32.0",
-    "prettier": "^2.3.2"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0"
-  }
+	"name": "eslint-prettier",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"lint": "prettier --ignore-path .gitignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"eslint": "^7.32.0",
+		"prettier": "^2.3.2"
+	}
 }
